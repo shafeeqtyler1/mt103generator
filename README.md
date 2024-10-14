@@ -8,13 +8,12 @@ You can install the package via Composer:
 
 ```bash
 composer require shafeeqkt/mt103generator
-
-Usage
+```
+# Usage
 1. Generating a Single MT103 File
 To generate an MT103 file for a single transaction, follow these steps:
 
 ```php
-
 
 use Shafeeqkt\Mt103generator\Mt103;
 
@@ -33,8 +32,6 @@ $fileContent = $generator->generateString();
 
 // Output or save the MT103 message
 echo $fileContent;
-
-
 ```
 
 
@@ -105,37 +102,54 @@ foreach ($mt103Strings as $mt103String) {
 
 
 
-Available Methods
+3. Available Methods
 Single Transaction Methods
+```php
 setSenderInfo(string $name, string $code)
+```
 Sets the sender's name and code.
-
+```php
 setSenderAddress(string $address, string $city, string $state, string $zip, string $country)
+```
 Sets the sender's address details.
-
+```php
 setBeneficiaryDetails(string $name, string $address, string $address2, string $city, string $state, string $zip)
+```
 Sets the beneficiary's details.
-
+```php
 setBeneficiaryBankDetails(string $accountNumber, string $bankName, string $bankAddress)
+```
 Sets the beneficiary's bank details.
-
+```php
 setDescription(string $description)
+```
 Sets the description for the payment.
-
+```php
 setProcessingDate(string $processingDate)
+```
+
 Sets the processing date for the payment.
-
+```php
 setSettlementDate(string $settlementDate)
-Sets the settlement date for the payment.
 
+```
+
+Sets the settlement date for the payment.
+```php
 generateString()
+```
 Generates the MT103 message string for a single transaction.
 
 Multiple Transaction Methods
-addTransaction(array $transaction)
-Adds a transaction to the generator. The transaction array should contain the same keys used in the single transaction methods.
 
+```php
+addTransaction(array $transaction)
+```
+Adds a transaction to the generator. The transaction array should contain the same keys used in the single transaction methods.
+```php
 generateMultipleStrings()
+```
+
 Generates MT103 message strings for all added transactions.
 
 
@@ -143,13 +157,10 @@ Generates MT103 message strings for all added transactions.
 Running Tests
 This package comes with unit tests using PHPUnit. You can run the tests with the following command:
 
-```cmd
-./vendor/bin/phpunit
+```bash
+.vendor/bin/phpunit tests/Mt103Test.php
 
-
-```cmd
-
-
+```
 
 ### Explanation:
 
