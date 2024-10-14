@@ -1,0 +1,23 @@
+{
+    "name": "shafeeqkt/mt103generator",
+    "description": "MT103 generator",
+    "type": "library",
+    "autoload": {
+        "psr-4": {
+            "Shafeeqkt\\Mt103generator\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Tests\\": "tests/"
+        }
+    },
+    "authors": [
+        {
+            "name": "shafeeq"
+        }
+    ],
+    "require-dev": {
+        "phpunit/phpunit": "^9.6"
+    }
+}
