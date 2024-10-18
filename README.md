@@ -162,13 +162,3 @@ This package comes with unit tests using PHPUnit. You can run the tests with the
 
 ```
 
-### Explanation:
-
-1. **Installation Section**: Describes how to install the package using Composer.
-2. **Usage Section**: Shows examples for generating single and multiple MT103 messages.
-3. **Available Methods Section**: Lists the available methods for single and batch transaction processing.
-4. **Testing Section**: Provides instructions for running unit tests using PHPUnit.
-5. **License Section**: Specifies that the package is under the MIT License.
-
-This `README.md` should give users a clear idea of how to use the package. You can add more details based on additional features or changes in your package.
-
